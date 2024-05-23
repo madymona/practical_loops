@@ -16,3 +16,31 @@ for (let i = 1; i <= 100; i++) {
         console.log(i);
     }
 }
+
+
+// Prime Time
+
+/* Declare an arbitrary number, n.
+Create a loop that searches for the next prime number, starting at n and incrementing from there.
+As soon as you find the prime number, log that number and exit the loop.*/
+
+let n = 20
+let num = n + 1
+
+while (true) {
+    let primeNum = true
+
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) {
+            primeNum = false;
+            break
+        }
+    }
+
+    if (primeNum) {
+        console.log(num + " is a prime number")
+        break
+    }
+
+    num++
+}
